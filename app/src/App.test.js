@@ -41,9 +41,25 @@ describe('<Dashboard />', () => {
 
 
     })
-    it('strikes button', () => {
+    it('ball button', () => {
       const { getByText } = render(<Dashboard />)
       const button = getByText('Ball');
+
+      fireEvent.click(button)
+
+
+    })
+    it('foul button', () => {
+      const { getByText } = render(<Dashboard />)
+      const button = getByText('Foul');
+
+      fireEvent.click(button)
+
+
+    })
+    it('hit button', () => {
+      const { getByText } = render(<Dashboard />)
+      const button = getByText('Hit');
 
       fireEvent.click(button)
 
