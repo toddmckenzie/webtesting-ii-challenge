@@ -11,7 +11,7 @@ class Display extends React.Component {
     render() {
         return (
             <>
-            <h1>Hitters Count</h1>
+            <h1>Count</h1>
             <h3>Strikes: {this.props.strikes}</h3>
             <h3>Balls: {this.props.balls}</h3>
             </>
