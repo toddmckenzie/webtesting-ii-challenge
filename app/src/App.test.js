@@ -10,14 +10,14 @@ import Display from './components/display';
 describe('<Dashboard />', () => {
    
     it('renders strike button', () => {
-        const { getAllByText } = render(<Dashboard />)
-        getAllByText(/Strike/i) //finds button
+        const { getByText } = render(<Dashboard />)
+        getByText('Strike') //finds button
 
        
     })
     it('renders ball button', () => {
-        const { getAllByText } = render(<Dashboard />)
-        getAllByText(/Ball/i) //finds button
+        const { getByText } = render(<Dashboard />)
+        getByText('Ball') //finds button
 
        
     })
@@ -33,7 +33,22 @@ describe('<Dashboard />', () => {
 
        
     })
+    it('strikes button', () => {
+      const { getByText } = render(<Dashboard />)
+      const button = getByText('Strike');
 
+      fireEvent.click(button)
+
+
+    })
+    it('strikes button', () => {
+      const { getByText } = render(<Dashboard />)
+      const button = getByText('Ball');
+
+      fireEvent.click(button)
+
+
+    })
 })
 describe('<Display />', () => {
    
