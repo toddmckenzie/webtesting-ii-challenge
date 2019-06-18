@@ -49,6 +49,9 @@ describe('<Display />', () => {
 
      
   })
-  
+  it('renders ball button', () => {
+    const { getByText } = render(<Dashboard />)
+    getByText(/Count/i) 
+  })
 
 })
